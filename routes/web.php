@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/whatever', function () {
+    return "who cares?";
+});
+
+Route::get('contact', 'PagesController@contact');
