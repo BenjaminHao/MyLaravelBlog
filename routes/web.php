@@ -21,3 +21,6 @@ Route::get('/whatever', function () {
 });
 
 Route::get('contact', 'PagesController@contact');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
