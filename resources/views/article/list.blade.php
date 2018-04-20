@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', '首页')
+@section('title', 'Index')
 
 @section('content')
 <div class="row">
     <div class="col-md-9">
-        <!-- 文章列表 -->
+        <!-- List of Articles -->
         <div class="z-panel">
             <div class="z-panel-header" style="text-align: left;">
-                文章列表
+                Articles
             </div>
             <div class="z-panel-body">
                 @foreach ($articles as $article)
@@ -21,13 +21,13 @@
     </div>
 
     <div class="col-md-3">
-        <!-- 作者信息 -->
+        <!-- author info -->
         @include('shared.author_info')
 
-        <!-- 热门文章 -->
+        <!-- Hot article  -->
         @include('shared.article_hot')
 
-        <!-- 最新留言 -->
+        <!-- new comment -->
         @include('shared.comment_new')
     </div>
 </div>

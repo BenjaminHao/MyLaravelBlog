@@ -9,7 +9,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    //数据表名称
+    // user table
     protected $table = 'users';
 
     /**
@@ -31,7 +31,7 @@ class User extends Authenticatable
     ];
 
 
-    //获取当前用户 Gravatar 头像
+    //get gravatar avatar
     public function gravatar($size = '100')
     {
         $hash = md5(strtolower(trim($this->attributes['email'])));

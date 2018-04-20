@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    //数据表名称
+    // the articles database
     protected $table = 'articles';
 
-    //可写字段
+    // able to fill
     protected $fillable = [
         'title', 'intro', 'content',
     ];
 
-    //更新浏览量
+    // update view numbers
     static public function update_view($id)
     {
         $article = Article::findOrFail($id);
@@ -24,14 +24,14 @@ class Article extends Model
         ]);
     }
 
-    //搜索文章
+    // search articles
     static public function search($key)
     {
         $article = Article::where('title', 'like', '%'.$key.'%')->paginate(10);
         return $article;
     }
 
-    //动态流-最新文章
+    // the new articles
     static public function new()
     {
         $articles = Article::orderBy('created_at','desc')->take(5)->get();
@@ -39,7 +39,7 @@ class Article extends Model
         return $articles;
     }
 
-    //动态流-热门文章
+    // the most viewed article
     static public function hot()
     {
         $articles = Article::orderBy('view','desc')->take(5)->get();

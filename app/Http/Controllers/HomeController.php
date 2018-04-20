@@ -15,9 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //获取动态流-最新文章
+        //get the newest article
         $articles_new = Article::new();
-        //获取动态流-热门文章
+        //get the most viewed article
         $articles_hot = Article::hot();
 
         return view('home', compact('articles_new', 'articles_hot'));
