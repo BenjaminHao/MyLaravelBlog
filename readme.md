@@ -1,30 +1,4 @@
-# Myweb 3
-基于 Laravel 5.3 的最新版个人技术博客
-
-[线上地址](http://59.110.137.214/)
-
-# 功能
-## 用户
-- 登录
-- 注册
-
-## 文章
-- 最新文章
-- 新增文章（后台）
-- 文章列表（后台）
-- 编辑文章（后台）
-- Markdown 编辑器
-
-# 扩展包
-- caouecs/laravel-lang 中文语言包
-- graham-campbell/markdown Markdown 解析器
-
-# 安装方法（稍后推出更详细的安装方法）
-- 安装 homestead 虚拟机
-- 克隆代码
-- 代码根目录执行 composer install
-
-
+Personal Blog based on Laravel 5.3
 
 # Laravel PHP Framework
 
