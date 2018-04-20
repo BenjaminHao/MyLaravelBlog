@@ -2,7 +2,7 @@
     <div class="col-md-12">
       <footer>
         <div class="about">
-            QQ:87826632
+            ® Benjamin Hao. Email:haomingkai@gmail.com
         </div>
       </footer>
     </div>

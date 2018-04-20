@@ -12,14 +12,14 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                首页
+                Home Page
             </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav" style="font-size: 18px;">
-                <li><a href="{{ route('article.list') }}">文章</a></li>
+                <li><a href="{{ route('article.list') }}">Articles</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -27,13 +27,13 @@
                 <form class="navbar-form navbar-left search" role="search" action="{{ route('article.search') }}" method="get">
                     <div class="form-group">
                         <span class="glyphicon glyphicon-search"></span>
-                        <input type="text" name="key" style="background-color: transparent;border: none;" placeholder="搜索">
+                        <input type="text" name="key" style="background-color: transparent;border: none;" placeholder="Search">
                     </div>
                 </form>
                 <!-- Authentication Links -->
                 @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">登录</a></li>
-                    <li><a href="{{ url('/register') }}">注册</a></li>
+                    <li><a href="{{ url('/login') }}">Login</a></li>
+                    <li><a href="{{ url('/register') }}">Register</a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

@@ -4,20 +4,23 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Cute+Font|Varela+Round');
+
 
 //----------------------------------------------------------
 //------------------     header
 //----------------------------------------------------------
-//导航栏
+//seaching
 .z-nav{
   position: absolute;
   top: 0;left: 0;right: 0;
   margin-bottom: 0;
   border-bottom: 0;
-  //背景颜色
+  //background colour
   @media (min-width: 768px) { background-color: transparent;color: #6CA6CD; }
   @media (max-width: 768px) { background-color: white;color: #6CA6CD; }
-  //字体颜色
+  //font colour
   @media (min-width: 768px) {
     .navbar-brand{ color: #6CA6CD; }.navbar-brand:hover{ color: white; }
     .navbar-nav{ li{ a{  color: #6CA6CD;  } a:hover{  color: white;  } } }
@@ -26,12 +29,12 @@
     margin: 0;
     padding-top: 13px;
     font-size: 14px;
-    font-family: "Microsoft YaHei";
+    font-family: 'Cute Font', cursive;;
     input{
     }
   }
 }
-//z-imax-img 图片巨幕条
+//z-imax-img
 .z-imax-img{
   overflow: hidden;
 }
@@ -52,7 +55,7 @@ footer {
 //----------------------------------------------------------
 //------------------     panel
 //----------------------------------------------------------
-//z-panel 面板
+//z-panel
 .z-panel{
   margin-bottom: 20px;
   border: 1px solid #e2e1e1;
@@ -85,7 +88,7 @@ footer {
 //----------------------------------------------------------
 //------------------     article
 //----------------------------------------------------------
-//z-article 文章模板
+//z-article
 .z-article{
   padding: 20px;
   border-bottom: 1px solid #eeeeee;
@@ -97,7 +100,7 @@ footer {
     }
   }
   .content{
-    font-family: "Microsoft YaHei";
+    font-family: 'Varela Round', sans-serif;
     h5{
       display:block;
       white-space:nowrap;
@@ -111,9 +114,9 @@ footer {
 }
 
 //----------------------------------------------------------
-//------------------     轮播
+//------------------     imax
 //----------------------------------------------------------
-//z-imax 轮播巨幕
+//z-imax
 .z-imax{
   .left{
     position: absolute;
@@ -152,7 +155,7 @@ footer {
 }
 
 //----------------------------------------------------------
-//------------------     头像
+//------------------     Avatar
 //----------------------------------------------------------
 .z-avatar{
     margin: 10px;
@@ -160,9 +163,9 @@ footer {
 }
 
 //----------------------------------------------------------
-//------------------     管理后台
+//------------------     Backend stuff
 //----------------------------------------------------------
-//左侧垂直菜单栏
+//left side
 .z-admin-menu{
   position: absolute;
   left: 0;top: 0;bottom: 0;
@@ -209,7 +212,7 @@ footer {
     background-color: #555;
   }
 }
-//右侧内容区
+//rightside
 .z-admin-box{
   margin-left: 300px;
   height: 100vh;
@@ -236,7 +239,7 @@ footer {
 //----------------------------------------------------------
 //------------------     table
 //----------------------------------------------------------
-//表格
+//table
 .z-table{
   width: 100%;
   background-color: white;

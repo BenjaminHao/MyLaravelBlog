@@ -1,7 +1,7 @@
-<!-- 热门文章 -->
+<!-- hot article -->
 <div class="z-panel">
     <div class="z-panel-header">
-        热门文章
+        Hot Articles
     </div>
     <div class="z-panel-body">
         <ul>

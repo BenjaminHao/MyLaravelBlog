@@ -14,23 +14,23 @@
 //Auth
 Auth::routes();
 
-//首页
+//index
 Route::get('/', 'HomeController@index')->name('home');
 
-//文章列表页
+//articles
 Route::get('/article/list', 'ArticleController@list')->name('article.list');
 
-//文章搜索页
+//search
 Route::get('/article/search', 'ArticleController@search')->name('article.search');
 
-//文章资源路由
+//resource
 Route::resource('article', 'ArticleController', ['only' => 'show']);
 
-//管理后台
+//backend
 Route::group(['middleware' => ['auth'],'namespace' => 'Admin','prefix' => 'admin'],function(){
-    //首页
+    //index
     Route::get('/','AdminController@index')->name('admin');
 
-    //文章资源路由
+    //articles
     Route::resource('article','ArticleController', ['except' => 'show']);
 });

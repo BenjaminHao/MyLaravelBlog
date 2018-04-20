@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', '管理后台') - lhz的个人主页</title>
+    <title>@yield('title', 'Backend') - Benjamin Hao's Homepage</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -22,47 +22,47 @@
     </script>
 </head>
 <body>
-    {{--左侧垂直菜单栏--}}
+    {{--LeftSide--}}
     <div class="z-admin-menu">
-        <div class="header">管理后台</div>
+        <div class="header">Backend</div>
         <ul CLASS="list">
 
-            <li><a href="{{ route('admin') }}"><span class="glyphicon glyphicon-cog"></span>面板</a></li>
+            <li><a href="{{ route('admin') }}"><span class="glyphicon glyphicon-cog"></span>Panel</a></li>
 
-            <li><a href="#article-admin" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
+            <li><a href="#article-admin" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>Articles</a></li>
             <ul id="article-admin" class="collapse">
-                <li><a href="{{ route('article.create') }}">新增文章</a></li>
-                <li><a href="{{ route('article.index') }}">文章列表</a></li>
+                <li><a href="{{ route('article.create') }}">New Article</a></li>
+                <li><a href="{{ route('article.index') }}">Article list</a></li>
             </ul>
 
 
-            <li><a href="#collapse2" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>菜单3</a></li>
+            <li><a href="#collapse2" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>Menu3</a></li>
             <ul id="collapse2" class="collapse">
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
+                <li><a href="">Menu31</a></li>
+                <li><a href="">Menu32</a></li>
+                <li><a href="">Menu33</a></li>
+                <li><a href="">Menu31</a></li>
+                <li><a href="">Menu32</a></li>
+                <li><a href="">Menu33</a></li>
+                <li><a href="">Menu31</a></li>
+                <li><a href="">Menu32</a></li>
+                <li><a href="">Menu33</a></li>
+                <li><a href="">Menu31</a></li>
+                <li><a href="">Menu32</a></li>
+                <li><a href="">Menu33</a></li>
+                <li><a href="">Menu31</a></li>
+                <li><a href="">Menu32</a></li>
+                <li><a href="">Menu33</a></li>
+                <li><a href="">Menu31</a></li>
+                <li><a href="">Menu32</a></li>
+                <li><a href="">Menu33</a></li>
+                <li><a href="">Menu31</a></li>
+                <li><a href="">Menu32</a></li>
+                <li><a href="">Menu33</a></li>
             </ul>
         </ul>
     </div>
-    {{--右侧内容区--}}
+    {{--RightSide--}}
     <div class="z-admin-box">
         <div class="header">
 

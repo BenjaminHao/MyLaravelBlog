@@ -1,22 +1,22 @@
 @extends('admin.admin')
 
-@section('title', '文章列表')
+@section('title', 'Article List')
 
 @section('content')
 <table class="z-table">
     <tr>
-        <th>标题</th>
-        <th>简介</th>
-        <th>操作</th>
+        <th>Title</th>
+        <th>Introduction</th>
+        <th>Operation</th>
     </tr>
     @foreach ($articles as $article)
         <tr>
             <td><a href="{{ route('article.edit', $article->id) }}">{{ $article->title }}</a></td>
             <td>{{ $article->intro }}</td>
             <td>
-                <!-- 编辑按钮 -->
+                <!-- Edit button -->
                 <a href="{{ route('article.edit', $article->id) }}" style="display: inline-block;"><span class="glyphicon glyphicon-edit"></span></a>
-                <!-- 删除按钮 -->
+                <!-- Delete button -->
                 <form action="{{ route('article.destroy', $article->id) }}" method="post" style="display: inline-block;">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}

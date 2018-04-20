@@ -9,20 +9,20 @@ use App\Models\Article;
 
 class ArticleController extends Controller
 {
-    //文章列表页
+    //List of article
     public function index()
     {
         $articles = Article::orderBy('created_at','desc')->paginate(20);
         return view('admin.article.index', compact('articles'));
     }
 
-    //新建文章页
+    //create new article
     public function create()
     {
         return view('admin.article.create');
     }
 
-    //文章->保存
+    //save the article
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -36,18 +36,18 @@ class ArticleController extends Controller
             'content' => $request->content,
         ]);
 
-        session()->flash('success', '添加成功');
+        session()->flash('success', 'Created');
         return redirect()->route('article.index');
     }
 
-    //编辑文章页
+    //edit article
     public function edit($id)
     {
         $article = Article::findOrFail($id);
         return view('admin.article.edit', compact('article'));
     }
 
-    //文章->更新
+    //update article
     public function update($id, Request $request)
     {
         $this->validate($request, [
@@ -62,16 +62,16 @@ class ArticleController extends Controller
             'content' => $request->content,
         ]);
 
-        session()->flash('success', '编辑成功');
+        session()->flash('success', 'Your Article Has Been Successfully Saved.');
         return back();
     }
 
-    //文章->删除
+    // delete article
     public function destroy($id)
     {
         $article = Article::findOrFail($id);
         $article->delete();
-        session()->flash('success', '删除成功');
+        session()->flash('success', 'Your Article Has Been Successfully Deleted.');
         return back();
     }
 }

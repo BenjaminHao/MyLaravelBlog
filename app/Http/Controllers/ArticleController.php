@@ -14,13 +14,13 @@ class ArticleController extends Controller
     {
         $article = Article::findOrFail($id);
 
-        //markdown 解析
+        //markdown to html
         $article->content = Markdown::convertToHtml($article->content);
 
-        //更新浏览量
+        //update view
         Article::update_view($id);
 
-        //获取动态流-热门文章
+        //hot article
         $articles_hot = Article::hot();
 
         return view('article.show', compact('article', 'articles_hot'));
@@ -30,7 +30,7 @@ class ArticleController extends Controller
     {
         $articles = Article::orderBy('created_at','desc')->paginate(10);
 
-        //获取动态流-热门文章
+        //get hot article
         $articles_hot = Article::hot();
 
         return view('article.list', compact('articles', 'articles_hot'));
@@ -40,10 +40,10 @@ class ArticleController extends Controller
     {
         $articles = Article::search($request->key);
 
-        //获取动态流-热门文章
+        //get hot article
         $articles_hot = Article::hot();
 
-        session()->flash('success', '搜索完成');
+        session()->flash('success', 'success');
         return view('article.list',compact('articles', 'articles_hot'));
     }
 }

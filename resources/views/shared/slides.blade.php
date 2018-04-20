@@ -1,4 +1,4 @@
-{{--轮播--}}
+{{--slides--}}
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">

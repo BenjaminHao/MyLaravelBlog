@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Index')
+@section('title', 'Articles')
 
 @section('content')
 <div class="row">
     <div class="col-md-9">
-        <!-- 文章信息 -->
+        <!-- article info -->
         <div class="z-panel">
             <div class="z-panel-header">
                 <h3>{{ $article->title }}</h3>

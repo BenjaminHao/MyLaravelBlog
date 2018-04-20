@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', '无标题') - lhz的个人主页</title>
+    <title>@yield('title', 'Benjamin Hao\'s Homepage') - Benjamin Hao's Homepage</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">

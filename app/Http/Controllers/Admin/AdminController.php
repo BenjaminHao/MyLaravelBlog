@@ -15,7 +15,7 @@ class AdminController extends Controller
             return view('admin.admin');
         }
         else {
-            session()->flash('warning', '没有权限');
+            session()->flash('warning', 'No Authority To Access');
             return view('home');
         }
     }
